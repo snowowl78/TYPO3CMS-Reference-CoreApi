@@ -100,12 +100,11 @@ Usage example:
 .. code-block:: php
    :linenos:
 
-   $signalSlotDispatcher = `\TYPO3\CMS\Core\Utility\GeneralUtility::`
-   makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
+   $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
    $signalSlotDispatcher->connect(
-       `\TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,  // Signal class name`
+       '\TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class',  // Signal class name
        'afterExtensionUninstall',                                  // Signal name
-       `\TYPO3\CMS\Core\Core\ClassLoadingInformation::class,        // Slot class name`
+       '\TYPO3\CMS\Core\Core\ClassLoadingInformation::class',        // Slot class name
        'dumpClassLoadingInformation'                               // Slot name
    );
 
